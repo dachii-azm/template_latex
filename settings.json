@@ -1,0 +1,35 @@
+{
+    //----other settings----
+
+    //----latex settings----
+    //viewerをタブで開く
+    "latex-workshop.view.pdf.viewer": "tab",
+    //intellisenseを有効にする
+    "latex-workshop.intellisense.package.enabled": true,
+    //生成ファイルを格納するディレクトリ名
+    "latex-workshop.latex.outDir": "out",
+    //自動でPDFを更新
+    "latex-workshop.latex.autoBuild.run":"onFileChange",
+    //生成ファイルで削除するファイル
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux","*.bbl","*.blg","*.dvi","*.fdb_latexmk","*.fls","*.synctex.gz","*.toc"
+    ],
+    //ビルドの動作
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk",
+            "tools": ["latexmk"]
+        },
+    ],
+    //ビルドのコマンド
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": ["-outdir=%OUTDIR%","%DOC%.tex"]
+        },
+    ]
+
+    //----other settings----
+}
