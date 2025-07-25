@@ -35,14 +35,17 @@ get latex-workshop and apply `settings.json`
 
 ```
 report/
-├── main.tex          # Main document file
-├── egbib.bib         # Bibliography database
+├── main.tex                # Main document file
+├── egbib.bib               # Bibliography database
 ├── sec/
-│   └── xxx.tex         # Section content
-├── fig/              # Figures directory
-├── tab/              # Tables directory
-├── out/              # Output directory
-└── README.md         # This file
+│   └── xxx.tex             # Section content
+├── fig/                    # Figures directory
+│   └── xxx.png(.jpg, .pdf) # Image or PDF for figure
+│   └── xxx.tex             # Figure content settings
+├── tab/                    # Tables directory
+│   └── xxx.tex             # Table content settings
+├── out/                    # Output directory
+└── README.md               # This file
 ```
 
 ## Usage
