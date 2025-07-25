@@ -10,6 +10,9 @@
     "git.autofetch": true,
     "latex-workshop.latex.outDir": "out",
     "latex-workshop.latex.tools": [
+        
+
+
 
         {
             "name": "latexmk",
@@ -136,98 +139,14 @@
             "env": {}
         },
         {
-            "name": "ptex2pdf",
             "command": "ptex2pdf",
             "args": [
                 "-l",
                 "-ot",
                 "-kanji=utf8 -synctex=1",
-                "%DOC%",
-                "-output-directory=%OUTDIR%"
+                "%DOC%"
             ]
         },
-        {
-            "name": "pbibtex",
-            "command": "pbibtex",
-            "args": [
-                "-kanji=utf8",
-                "%OUTDIR%/%DOCFILE%"
-            ],
-        }
     ],
-    "latex-workshop.linting.chktex.enabled": true,
-    "texlab.build.executable": "ptex2pdf",
-    "latex-workshop.latex.recipes": [
-
-        {
-            "name": "ptex2pdf",
-            "tools": [
-                "ptex2pdf",
-                "pbibtex",
-                "ptex2pdf",
-                "ptex2pdf"
-            ]
-
-        },
-        {
-            "name": "latexmk",
-            "tools": [
-                "latexmk"
-            ]
-        },
-        {
-            "name": "latexmk (latexmkrc)",
-            "tools": [
-                "latexmk_rconly"
-            ]
-        },
-        {
-            "name": "latexmk (lualatex)",
-            "tools": [
-                "lualatexmk"
-            ]
-        },
-        {
-            "name": "latexmk (xelatex)",
-            "tools": [
-                "xelatexmk"
-            ]
-        },
-        {
-            "name": "pdflatex -> bibtex -> pdflatex * 2",
-            "tools": [
-                "pdflatex",
-                "bibtex",
-                "pdflatex",
-                "pdflatex"
-            ]
-        },
-        {
-            "name": "Compile Rnw files",
-            "tools": [
-                "rnw2tex",
-                "latexmk"
-            ]
-        },
-        {
-            "name": "Compile Jnw files",
-            "tools": [
-                "jnw2tex",
-                "latexmk"
-            ]
-        },
-        {
-            "name": "Compile Pnw files",
-            "tools": [
-                "pnw2tex",
-                "latexmk"
-            ]
-        },
-        {
-            "name": "tectonic",
-            "tools": [
-                "tectonic"
-            ]
-        }
-    ]
+    "latex-workshop.linting.chktex.enabled": true
 }

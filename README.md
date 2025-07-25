@@ -27,6 +27,10 @@ sudo tlmgr paper a4
 cp .latexmkrc ~/.
 ```
 
+### 4. VS Code Extension.
+get latex-workshop and apply `settings.json`
+
+
 ## Project Structure
 
 ```
@@ -37,6 +41,7 @@ report/
 │   └── xxx.tex         # Section content
 ├── fig/              # Figures directory
 ├── tab/              # Tables directory
+├── out/              # Output directory
 └── README.md         # This file
 ```
 
@@ -44,29 +49,14 @@ report/
 
 ### Compile the document
 ```bash
-# Using pdflatex
-pdflatex main.tex
-bibtex main
-pdflatex main.tex
-pdflatex main.tex
-
-# Or using latexmk (recommended)
-latexmk -pdf main.tex
+# Using ptex2pdf
+ptex2pdf -> pbibtex -> ptex2pdf -> ptex2pdf
 ```
 
 ### Clean auxiliary files
 ```bash
 latexmk -c
 ```
-
-## Document Sections
-
-1. **Market Analysis and Methodology** - Data sources, KPIs, statistical analysis
-2. **Executive Summary** - High-level findings and recommendations
-3. **Market Overview** - Global economic indicators and asset class performance
-4. **Risk Assessment** - Market risks and mitigation strategies
-5. **Investment Recommendations** - Portfolio allocation and sector analysis
-6. **Conclusion** - Summary and forward-looking recommendations
 
 ## Customization
 
